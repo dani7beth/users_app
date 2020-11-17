@@ -1,9 +1,10 @@
 <h1>Users</h1>
 <% @users.each do |user| %>
 <h2><%= user.full_name %></h2>
-<p><%= link_to 'User Info', user_path(user)%></p>
-<p><%= link_to 'Edit Info', edit_user_path(user)%></p>
+<%= link_to 'User Info', user_path(user)%>
+<%= link_to 'Edit Info', edit_user_path(user)%>
+<%= link_to 'Delete User', user, method: :delete%>
 <% end %>
 
 
-<p><%= link_to 'Create a User', new_user_path %></p>
+

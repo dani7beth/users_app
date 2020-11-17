@@ -6,3 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+10.times do
+    user = User.create(
+      full_name: Faker::Name.name,
+      age: rand(18...65),
+      gender: Faker::Gender.short_binary_type,
+      alive: rand(2).odd? ? true : false,
+    )
+    # # Has many notes lets make number of notes random for each contact
+    # num_notes = rand(1..3)
+    # messages = [
+    #   Faker::Hipster.sentences(number: 1),
+    #   Faker::Quote.famous_last_words,
+    #   Faker::ChuckNorris.fact,
+    # ]
+    # num_notes.times do |i|
+    #   contact.notes.create(body: messages[i])
+    # end
+  end
