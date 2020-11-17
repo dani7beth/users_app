@@ -1,0 +1,8 @@
+<h1>Users</h1>
+<h1><%= @user.full_name %></h1>
+<ul>
+<li>Age: <%= @user.age%></li>
+<li>Gender: <%= @user.gender%></li>
+<li>Alive? <%= @user.alive ? 'yes' : 'no' %></li>
+</ul>
+<%= link_to 'Back', users_path %>
