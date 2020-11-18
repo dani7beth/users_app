@@ -13,14 +13,15 @@
       gender: Faker::Gender.short_binary_type,
       alive: rand(2).odd? ? true : false,
     )
-    # # Has many notes lets make number of notes random for each contact
-    # num_notes = rand(1..3)
-    # messages = [
-    #   Faker::Hipster.sentences(number: 1),
-    #   Faker::Quote.famous_last_words,
-    #   Faker::ChuckNorris.fact,
-    # ]
-    # num_notes.times do |i|
-    #   contact.notes.create(body: messages[i])
-    # end
+    # Has many notes lets make number of notes random for each user
+    num_notes = rand(1..4)
+    messages = [
+      Faker::Hipster.sentences(number: 1),
+      Faker::Quote.famous_last_words,
+      Faker::ChuckNorris.fact,
+      Faker::TvShows::MichaelScott.quote
+    ]
+    num_notes.times do |i|
+      user.notes.create(body: messages[i])
+    end
   end

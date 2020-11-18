@@ -4,5 +4,8 @@
 <li>Age: <%= @user.age%></li>
 <li>Gender: <%= @user.gender%></li>
 <li>Alive? <%= @user.alive ? 'yes' : 'no' %></li>
+
+<li><%= @notes.body %></li>
+
 </ul>
 <%= link_to 'Back', users_path %>

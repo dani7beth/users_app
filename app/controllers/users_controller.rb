@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
+    @notes = Note.all
   end
 
   def show
-    @user = User.find(params[:id])
+      @user = User.find(params[:id])
+      @notes = Note.find(params[:id])
   end
 
   def new
@@ -45,5 +47,6 @@ end
   private
   def users_params
     params.require(:user).permit(:full_name, :age, :gender, :alive)
+    params.require(:note).permit(:body)
   end
 end
