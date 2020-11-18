@@ -47,6 +47,6 @@ end
   private
   def users_params
     params.require(:user).permit(:full_name, :age, :gender, :alive)
-    params.require(:note).permit(:body)
+    
   end
 end
